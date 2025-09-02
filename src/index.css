@@ -2,39 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* AI-Powered Meeting Knowledge Hub Design System */
 
 @layer base {
   :root {
+    /* Core Palette - Professional AI Theme */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 222 24% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 222 24% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 222 24% 12%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* AI-Themed Primary Colors */
+    --primary: 242 82% 58%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 242 82% 52%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Modern Secondary Palette */
+    --secondary: 210 25% 97%;
+    --secondary-foreground: 222 24% 12%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 216 20% 95%;
+    --muted-foreground: 215 12% 54%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 242 82% 96%;
+    --accent-foreground: 242 82% 38%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Semantic Colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    /* Interactive Elements */
+    --border: 216 20% 90%;
+    --input: 216 20% 90%;
+    --ring: 242 82% 58%;
+
+    /* AI Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(242 82% 58%), hsl(262 72% 65%));
+    --gradient-secondary: linear-gradient(135deg, hsl(210 25% 97%), hsl(216 20% 95%));
+    --gradient-accent: linear-gradient(135deg, hsl(242 82% 96%), hsl(262 72% 92%));
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.1), 0 2px 4px -2px hsl(0 0% 0% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.1), 0 4px 6px -4px hsl(0 0% 0% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.1), 0 8px 10px -6px hsl(0 0% 0% / 0.1);
+
+    /* Animation Variables */
+    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    --border: 216 20% 90%;
+    --input: 216 20% 90%;
+    --ring: 242 82% 58%;
 
     --radius: 0.5rem;
 
@@ -56,33 +85,44 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    /* Dark Mode Palette */
+    --background: 222 24% 6%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
+    --card: 222 24% 8%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222.2 84% 4.9%;
+    --popover: 222 24% 8%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    /* AI Primary in Dark */
+    --primary: 242 82% 65%;
+    --primary-foreground: 222 24% 6%;
+    --primary-hover: 242 82% 72%;
 
-    --secondary: 217.2 32.6% 17.5%;
+    --secondary: 217 32% 18%;
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 217 32% 15%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 242 32% 18%;
+    --accent-foreground: 242 82% 65%;
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 62% 45%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --success: 142 72% 42%;
+    --warning: 38 85% 55%;
+
+    --border: 217 32% 15%;
+    --input: 217 32% 15%;
+    --ring: 242 82% 65%;
+
+    /* Dark Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(242 82% 65%), hsl(262 72% 72%));
+    --gradient-secondary: linear-gradient(135deg, hsl(217 32% 18%), hsl(217 32% 15%));
+    --gradient-accent: linear-gradient(135deg, hsl(242 32% 18%), hsl(262 32% 22%));
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
